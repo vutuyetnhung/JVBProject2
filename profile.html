@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		#a1{
+			color: white;
+		}
+		li{
+			
+		}
+		input{
+			width: 65%;
+			margin-top: 5px
+		}
+		p{
+			margin-top: 10px;
+		}
+		label{
+			margin-top: 5px
+		}
+		span{
+			color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		function validate(){
+				 var oldpass = document.getElementById('oldpass').value;
+			    var newpass1 = document.getElementById('newpass1').value;
+				var newpass2 = document.getElementById('newpass2').value;
+			   
+			    if (oldpass == ''){
+					document.getElementById('noteold').innerHTML='Mục này không được để trống.';
+			    }else{
+					document.getElementById('noteold').innerHTML='';
+				}
+				if (newpass1 == '') {
+				document.getElementById('notenew1').innerHTML='Mục này không được để trống.';	
+				}else if (newpass1.length<=8 || newpass1.length>=16) {
+					document.getElementById('notenew1').innerHTML='Mật khẩu cần có độ dài tối thiểu là 9 và tối đa là 15 ký tự.';
+				}else{
+					document.getElementById('notenew1').innerHTML='';
+				}
+				if (newpass2=='') {
+						document.getElementById('notenew2').innerHTML='Mục này không được để trống.';		
+				}else{
+					document.getElementById('notenew2').innerHTML='';
+				}
+				if (oldpass!=''&& newpass1 !='' && newpass2!='') {
+					
+					document.getElementById('noteold').innerHTML='';
+					document.getElementById('notenew1').innerHTML='';
+					document.getElementById('notenew2').innerHTML='';
+				}
+				var newpass = document.getElementById('newpass1');
+				var filter = /^[a-z0-9\!#\$%\(\)<>\[\]]*$/;
+				 if (!filter.test(newpass.value)) {
+				 	document.getElementById('notenew1').innerHTML='Mật khẩu chỉ bao gồm các ký tự alphabet và các ký tự sau: !#$%()<>[]';
+				 }
+				if (newpass1 != newpass2) {
+					document.getElementById('notenew2').innerHTML='Mật khẩu mới và mật khẩu xác nhận không trùng nhau.';
+				}
+				
+
+
+				
+			 
+			    return false;
+		}
+
+	</script>
+</head>
+<body>
+	<header id="banner">
+		<div class="container-fluid align-middle" style="background: #f97617;">
+			<div class="col-md-12">
+				<ul class="nav navbar-nav">
+					<li class=""><img src="jvb.png" style="width:45px "></li>
+					<li class=""><a href="#"><img src="note.png"></a></li>
+					<li><a id="a1" href="#">TRANG CHỦ</a></li> 
+					<li><a id="a1" href="#">THÀNH VIÊN</a></li>
+					<li><a id="a1" href="#">QUẢN LÝ THỜI GIAN</a></li>
+					<li><a id="a1" href="#">NHÓM</a></li>
+					<li><a id="a1" href="#">PHÒNG HỌP</a></li>
+					<li><a id="a1" href="#">HỖ TRỢ</a></li>
+					<li><a id="a1" href="#">NỘI QUY</a></li>
+					<li class=""><a href="#"><img src="ii.png"></a></li>
+				</ul>
+
+			</div>
+				
+		</div>
+			
+		</div>
+	</header>
+	<article id="main-content">
+		<div class="container-fluid">
+			<div class="panel-heading" style="margin-top: 50px;">
+				<div class="panel-title"><p style="text-align: center;">HỒ SƠ CÁ NHÂN</p></div>
+				
+				<div class="col-md-3" style="padding-left: 10px;">
+					<form style="padding: 10px;border: 1px solid aquamarine;">
+						<img src="anh.jpg" alt="" width="99.5%" height="150px" style=""><br>
+						<p style="text-align: center;">
+							<a href="#" >Click to select<br /></a>
+							<button ><img src="up.png"></button>
+					<button><img src="dele.png"></button>
+						</p>
+						
+					
+					</form>
+					
+					<h4>Generation Infomation</h4>
+					<ul>
+						<li style="color: darkgray;">Full name
+						</li>
+						Vũ Tuyết Nhung
+						<li style="color: darkgray;">Position</li>
+						MEMBERS
+					</ul>
+					<h4>Contact Information</h4>	
+					<ul>
+						<li style="color: darkgray;">mobiphone
+							<br />
+						</li>
+						<li style="color: darkgray;">email
+						</li>
+						muatunhu@gmail.com
+						<li style="color: darkgray;">address
+						</li>
+						Kim Thư, Thanh Oai, Hà Nội
+					</ul>
+				</div>
+				<div class="col-md-9" style="border: 1px solid aquamarine;">
+					<ul class="nav nav-tabs">
+				    <li class="active"><a data-toggle="tab" href="#infomation" style="background: whitesmoke;">Infomation</a></li>
+				    <li><a data-toggle="tab" href="#changeinfomation" style="background: whitesmoke;">Change Infomation</a></li>
+				    <li><a data-toggle="tab" href="#changepassword" style="background: whitesmoke;">Change Password</a></li>
+				  </ul>
+				   <div class="tab-content">
+				   	
+				   		<div id="infomation" class="tab-pane fade in active">
+							<div class="col-md-6">
+								 <h3>About me</h3>
+
+					      <p>I enjoy the simple things in life. Being happy is a state of mind, and I don't think people should settle for less than they deserve. I always look toward the next best thing. I like seeing other people happy. When someone else is down, it breaks my heart.</p>
+					      <h3>Bio</h3>
+					        <p>I enjoy the simple things in life. Being happy is a state of mind, and I don't think people should settle for less than they deserve. I always look toward the next best thing. I like seeing other people happy. When someone else is down, it breaks my heart.</p>
+					        <h3>Job</h3>
+					          <p>I enjoy the simple things in life. Being happy is a state of mind, and I don't think people should settle for less than they deserve. I always look toward the next best thing. I like seeing other people happy. When someone else is down, it breaks my heart.</p>
+					          <h3>Language</h3>
+					          <p></p>
+					           <table class="table table-bordered">
+							    <thead>
+							      <tr>
+							        <th>90%</th>
+							        <th>43%</th>
+							        <th>16%</th>
+							      </tr>
+							    </thead>
+							    <tbody>
+							      <tr>
+							        <td>English</td>
+							        <td>Chinese</td>
+							        <td>Japanese</td>
+							      </tr>
+							     
+							      
+							    </tbody>
+							  </table>
+							</div>
+							<div class="col-md-6">
+								<h4>My Skill</h4>
+								<ul>
+									<li>Web Design</li>
+									<p>40%</p>
+									<li>Wordpress</li>
+									<p>
+										80%
+									</p>
+									<li>Branding</li>
+									<p>70%</p>
+									<li>SEO Optimization</li>
+									<p>60%</p>
+
+
+								</ul>
+								<h4>Other Skills</h4>
+							</div>
+					     
+					    </div>
+				   	
+					    
+					    <div id="changeinfomation" class="tab-pane fade">
+					     <p><strong>Username:</strong></p>
+					      <input type="text" name="lname" disabled value="Nhung.Tuyet" style="text-align: center;    background: antiquewhite;"><br>
+					      <p><strong>Nickname</strong></p>
+					      <input type="text" name="" value="ame yuki" >
+					      <p><strong>Email</strong></p>
+					      <input type="text" name="" value="muatunhu@gmail.com">
+					      <p><strong>Fullname</strong></p>
+					      <input type="text" name="" value="Vũ Tuyết Nhung">
+					      <p><strong>Slogan</strong></p>
+					      <textarea rows="5" cols=”40″ value="Bie dan qing" autofocus style="width: 65%"></textarea>
+					      <p></p>
+					      <button type="button" class="btn btn-success" style="margin-bottom: 20px;">Cập nhật</button>
+					    </div>
+					    <div id="changepassword" class="tab-pane fade">
+					    	 <div class="col-md-3" style="margin-top: 40px">
+					     	 	<label>Mật khẩu cũ</label>
+					    	 </div>
+					    	 <div class="col-md-9" style="margin-top: 40px">
+					     		<input type="text" name="" id="oldpass"><br>
+					     		<span id="noteold"></span>
+					     	</div>
+					     	 <div class="col-md-3" style="margin-top: 10px">
+					     	 	<label>Mật khẩu mới</label>
+					    	 </div>
+					    	 <div class="col-md-9" style="margin-top: 10px">
+					    	 	 <input type="text" name=""  id="newpass1"><br>
+					      		<span id="notenew1"></span>
+					    	 </div>
+					    	 <div class="col-md-3" style="margin-top: 10px">
+					    	 	 <label>Xác nhận mật khẩu</label><br>
+					    	 </div>
+					    	 <div class="col-md-9" style="margin-top: 10px">
+					    	 	<input type="text" name=""  id="newpass2"><br>
+					    	 	 <span id="notenew2"></span>
+					    	 </div>
+
+					    	
+					      <div class="col-md-12"> <button type="button" class="btn btn-success" style="margin-left: 40%;    margin-top: 30px;margin-bottom: 20px;" onclick="validate()">Lưu mật khẩu</button></div>
+
+					     
+					    </div>
+					   
+				</div>
+	
+  </div>
+				
+			</div>
+		</div>
+	</article>
+	
+</body>
+</html>
