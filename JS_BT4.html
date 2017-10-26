@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <script type=”text/javascript” src=”http://code.jquery.com/jquery-2.0.3.min.js”></script>
+       <style type="text/css">
+            select{
+                height: 26px;
+            }
+       </style>
+        <script type="text/javascript">
+            function addRo(row){
+                var table = document.getElementById("myTable");
+                var i=row.parentNode.parentNode.rowIndex;
+                var r = table.insertRow(i+1);
+                var cell1 = r.insertCell(0);
+                cell1.innerHTML = "<input type=\"text\" >";
+                var cell2 = r.insertCell(1);
+                cell2.innerHTML = "<input type=\"text\" >";
+                var cell3 = r.insertCell(2);
+                cell3.innerHTML = "<input type=\"text\" >";
+                var cell4 = r.insertCell(3);
+                cell4.innerHTML = '<input style="width: 50%;" class="inpsel" type="text" ><select style="margin-left: 4px;"><option>Object 1</option></select>';
+                var cell5 = r.insertCell(4);
+                cell5.innerHTML = "<label></label>";
+                var cell6 = r.insertCell(5);
+                cell6.innerHTML = '<label><input class="check" type="checkbox" value=""></label>';
+                var cell7 = r.insertCell(6);
+                cell7.innerHTML = '<input type="text" name="">';
+                var cell8 = r.insertCell(7);
+                cell8.innerHTML = '<button type="button" class="btn addRow" onclick="addRo(this)">+</button>';
+                var cell9 = r.insertCell(8);
+                cell9.innerHTML = '<button type="button" class="btn" onclick="deleteRow(this)">-</button>';
+
+                
+            }
+
+
+    function addLast(){
+                 $('#myTable').append('<tr><td><input type="text" name=""></td><td><input type="text" name=""></td><td><input type="text" name="" value=""></td><td><input style="width: 50%;" class="inpsel" type="text" name="" value=""><select style="margin-left: 4px;"><option>Object 1</option></select></td><td><label></label></td><td><label><input class="check" type="checkbox" value=""></label></td><td><input type="text" name=""></td><td><button type="button" class="btn addRow" onclick="addR(this)">+</button></td><td><button type="button" class="btn" onclick="deleteRow(this)">-</button></td></tr>');
+        }
+
+            function deleteRow(row)
+    {
+        var i=row.parentNode.parentNode.rowIndex;
+        document.getElementById('myTable').deleteRow(i);
+    }
+
+    
+       </script>
+       
+       
+</head>
+<body>
+    <article id="main-content">
+        <table class="table table-bordered" id="myTable">
+    <thead>
+      <tr>
+        <th>Thời gian</th>
+        <th>Tên hạng mục</th>
+        <th>Đơn giá</th>
+        <th>Số lượng</th>
+        <th>Số tiền</th>
+        <th></th>
+        <th>Ghi chú</th>
+        <th><button type="button" class="btn" onclick="addLast()">+</button></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+             
+      <tr id="row1">
+        <td><input type="text" name=""></td>
+        <td><input type="text" name=""></td>
+        <td><input type="text" name="" value="10000"></td>
+        <td>
+            <input style="width: 50%;" class="inpsel" type="text" name="" value="10">
+            <select class="">
+                <option>Object 1</option>
+            </select>
+        </td>
+        <td><label>100000</label></td>
+        <td><label><input class="check" type="checkbox" value=""></label></td>
+        <td><input type="text" name=""></td>
+        <td><button type="button" class="btn addRow" onclick="addRo(this)">+</button></td>
+        <td><button type="button" class="btn" onclick="deleteRow(this)">-</button></td>
+        
+      </tr>
+      <tr id="row2">
+        <td><input type="text" name=""></td>
+        <td><input type="text" name=""></td>
+        <td><input type="text" name="" value="20000"></td>
+        <td>
+            <input style="
+    width: 50%;" class="inpsel" type="text" name="" value="5">
+            <select>
+                <option>Object 1</option>
+            </select>
+        </td>
+        <td><label>100000</label></td>
+        <td><label><input class="check" type="checkbox" value=""></label></td>
+        <td><input type="text" name=""></td>
+        <td><button type="button" class="btn addRow" onclick="addRo(this)">+</button></td>
+        <td><button type="button" class="btn" onclick="deleteRow(this)">-</button></td>
+      </tr>
+      <tr>
+         <td><input type="text" name=""></td>
+        <td><input type="text" name=""></td>
+        <td><input type="text" name="" value="30000"></td>
+        <td>
+            <input style="width: 50%;" class="inpsel" type="text" name="" value="1">
+            <select>
+                <option>Object 1</option>
+            </select>
+        </td>
+        <td><label>30000</label></td>
+        <td><label><input id="check3" type="checkbox" value=""></label></td>
+        <td><input type="text" name=""></td>
+        <td><button type="button" class="btn addRow" onclick="addRo(this)">+</button></td>
+        <td><button type="button" class="btn" onclick="deleteRow(this)">-</button></td>
+      </tr>
+    </tbody>
+  </table>
+  
+ 
+    </article>
+</body>
+</html>

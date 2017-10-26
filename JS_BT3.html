@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài 3</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	   <script type=”text/javascript” src=”http://code.jquery.com/jquery-2.0.3.min.js”></script>
+	  <style type="text/css">
+	  	#a1{
+	  		color: white;
+	  	}
+	  </style>
+	 <script type="text/javascript">
+    $(function(){
+        /*Check & uncheck all*/
+        $(document).on('change', '.checkall', function(){
+            var $_this = $(this);
+            $('.check').prop('checked', $_this.prop('checked'));
+        });
+        /*Check list item*/
+        $(document).on('change', '.check', function(){
+            var $_this = $(this);
+            var $_checkedall = true;
+            $('.check').each(function(){
+                if(!$(this).is(':checked')){
+                    $_checkedall = false;
+                }
+                $('.checkall').prop('checked', $_checkedall);
+            });
+        });
+    });
+</script>
+</head>
+<body>
+	<header id="banner">
+			<div class="container-fluid align-middle" style="background: #f97617;">
+				<div class="col-md-12">
+					<ul class="nav navbar-nav">
+						<li class=""><img src="jvb.png" style="background: white;margin: 5px 0;width:45px;"></li>
+						<li class=""><a href="#"><img src="note.png"></a></li>
+						<li><a id="a1" href="#">TRANG CHỦ</a></li> 
+						<li><a id="a1" href="#">THÀNH VIÊN</a></li>
+						<li><a id="a1" href="#">QUẢN LÝ THỜI GIAN</a></li>
+						<li><a id="a1" href="#">NHÓM</a></li>
+						<li><a id="a1" href="#">PHÒNG HỌP</a></li>
+						<li><a id="a1" href="#">HỖ TRỢ</a></li>
+						<li><a id="a1" href="#">NỘI QUY</a></li>
+						<li class=""><a href="#"><img src="ii.png"></a></li>
+					</ul>
+
+				</div>
+					
+			</div>
+				
+			</div>
+		</header>
+		<article id="main-content">
+			<div class="container-fluid">
+				<div style="margin: 50px 0;">
+					<input type="text" name="" style="border-radius: 3px;width: 25%;" placeholder="Nhập từ khóa và nhấn Enter">
+				 <button type="button" class="btn btn-success">Tìm kiếm</button></div>
+			</div>
+		</article>
+		<div class="">
+			<p style="
+    text-align: center;background: #cbecec;padding: 8px;">DANH SÁCH THÀNH VIÊN</p>
+		</div>
+		<div>
+			<table class="table table-bordered" style="margin: 5px">
+    <thead>
+      <tr>
+        <th></th>
+        <th><label><input class="checkall" type="checkbox" value=""></label></th>
+        <th></th>
+        <th>NHÓM</th>
+        <th>EMAIL</th>
+        <TH>HỌ VÀ TÊN</TH>
+        <TH>KHẨU HIỆU</TH>
+        <TH>VỊ TRÍ</TH>
+        <TH>TRẠNG THÁI</TH>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td><label><input class="check" type="checkbox" value=""></label></td>
+        <td></td>
+        <td>Lập trình IOS</td>
+        <td>du.cuong@jvb-corp.com</td>
+        <td>Dư Đức Cường</td>
+        <td>meis shen ma</td>
+        <td>MEMBER</td>
+         <td><input id="hoat" type="button" name="" value="Hoạt động" onclick="btnHoatdong2(this.id)"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><label><input class="check" type="checkbox" value=""></label></td>
+        <td></td>
+        <td>Lập trình PHP</td>
+        <td>nguyenhoang@jvb-corp.com</td>
+        <td>Nguyeenx Van Hoang</td>
+        <td>meis shen ma</td>
+        <td>MEMBER</td>
+        <td><input id="hoat1" type="button" name="" value="Hoạt động" onclick="btnHoatdong2(this.id)"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><label><input class="check" type="checkbox" value=""></label></td>
+        <td></td>
+        <td>Lập trình PHP</td>
+        <td>du.cuong@jvb-corp.com</td>
+        <td>Dư Đức Cường</td>
+        <td>meis shen ma</td>
+        <td>MEMBER</td>
+        <td><input id="hoat2" type="button" name="" value="Hoạt động" onclick="btnHoatdong2(this.id)"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><label><input class="check" type="checkbox" value=""></label></td>
+        <td></td>
+        <td>Lập trình IOS</td>
+        <td>du.cuong@jvb-corp.com</td>
+        <td>Dư Đức Cường</td>
+        <td>meis shen ma</td>
+        <td>MEMBER</td>
+         <td><input id="hoat3" type="button" name="" value="Hoạt động" onclick="btnHoatdong2(this.id)"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><label><input class="check" type="checkbox" value=""></label></td>
+        <td></td>
+        <td>Lập trình IOS</td>
+        <td>du.cuong@jvb-corp.com</td>
+        <td>Dư Đức Cường</td>
+        <td>meis shen ma</td>
+        <td>MEMBER</td>
+        <td><input id="hoat4" type="button" name="" value="Hoạt động" onclick="btnHoatdong2(this.id)"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><label><input class="check" type="checkbox" value=""></label></td>
+        <td></td>
+        <td>Lập trình IOS</td>
+        <td>du.cuong@jvb-corp.com</td>
+        <td>Dư Đức Cường</td>
+        <td>meis shen ma</td>
+        <td>MEMBER</td>
+         <td><input id="hoat5" type="button" name="" value="Hoạt động" onclick="btnHoatdong2(this.id)"></td>
+      </tr>
+     
+    </tbody>
+  </table>
+  <script type="text/javascript">
+  	
+  	function btnHoatdong2(idbutton){
+  		var val = document.getElementById(idbutton).value;
+  		if(confirm("Bạn có muốn chuyển trạng thái")==true)
+  		{
+  			if(val=="Hoạt động"){
+  				document.getElementById(idbutton).value = "Không hoạt động";
+  			}else{
+  				document.getElementById(idbutton).value = "Hoạt động";
+  			}
+  			
+  		}
+  	}
+  </script>
+  <div style="">
+  	 <button type="button" class="btn btn-primary">1</button>
+  	  <button type="button" class="btn btn-primary">2</button>
+  	   <button type="button" class="btn btn-primary">3</button>
+  </div>
+		</div>
+	
+</body>
+</html>
