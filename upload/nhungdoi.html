@@ -1,0 +1,30 @@
+ <script type="text/javascript">
+	  
+	  		$(document).ready(function() {
+    	$('#checkall').click(function(event) {  //on click
+        if(this.checked) { // check select status
+            $('[type="checkbox"]').each(function() { //loop through each checkbox
+                this.checked = true;    
+            });
+        }else{
+            $('[type="checkbox"]').each(function() { //loop through each checkbox
+                this.checked = false; //deselect all checkboxes with class "checkbox1"                     
+            });       
+        }
+    });
+    	
+   
+
+        $(document).on('change', '.check', function(){
+    var $_this = $(this);
+    var $_checkedall = true;
+    $('.check').each(function(){
+        if(!$(this).is(':checked')){
+            $_checkedall = false;
+        }
+        $('.checkall').prop('checked', $_checkedall);
+    });
+});
+    
+	  	
+	  </script>

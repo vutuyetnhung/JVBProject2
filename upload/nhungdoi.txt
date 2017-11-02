@@ -82,7 +82,7 @@
 						<li><a id="a1" href="#">PHÒNG HỌP</a></li>
 						<li><a id="a1" href="#">HỖ TRỢ</a></li>
 						<li><a id="a1" href="#">NỘI QUY</a></li>
-						<li class=""><a href="logout22.php"><img src="ii.png"></a></li>
+						<li class=""><a href="#"><img src="ii.png"></a></li>
 					</ul>
 
 				</div>
@@ -190,21 +190,18 @@
 					   	
 						    
 						    <div id="changeinfomation" class="tab-pane fade">
-						    	<form action="update.php" method="POST">
-						    		 <p><strong>Username:</strong></p>
+						     <p><strong>Username:</strong></p>
 						      <input type="text" name="lname" disabled value="Nhung.Tuyet" style="text-align: center;    background: antiquewhite;"><br>
 						      <p><strong>Nickname</strong></p>
-						      <input type="text" name="nickname" value="ame yuki" >
+						      <input type="text" name="" value="ame yuki" >
 						      <p><strong>Email</strong></p>
-						      <input type="text" name="email" value="muatunhu@gmail.com">
+						      <input type="text" name="" value="muatunhu@gmail.com">
 						      <p><strong>Fullname</strong></p>
-						      <input type="text" name="fullname" value="Vũ Tuyết Nhung">
+						      <input type="text" name="" value="Vũ Tuyết Nhung">
 						      <p><strong>Slogan</strong></p>
-						      <textarea rows="5" cols=”40″ name="slogan" value="Bie dan qing" autofocus style="width: 65%"></textarea>
+						      <textarea rows="5" cols=”40″ value="Bie dan qing" autofocus style="width: 65%"></textarea>
 						      <p></p>
-						      <button type="submit" name="update" class="btn btn-success" style="margin-bottom: 20px;">Cập nhật</button>
-						    	</form>
-						    
+						      <button type="button" class="btn btn-success" style="margin-bottom: 20px;">Cập nhật</button>
 						    </div>
 						    <div id="changepassword" class="tab-pane fade">
 						    	 <div class="col-md-3" style="margin-top: 40px">
